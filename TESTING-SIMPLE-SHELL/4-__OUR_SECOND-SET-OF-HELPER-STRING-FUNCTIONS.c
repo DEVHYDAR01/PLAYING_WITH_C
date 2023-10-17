@@ -43,7 +43,8 @@ char *__our_strcat_concatstr(char *destination, char *source)
 }
 
 /**
- *__our_strspn_prefixsubstr - This function will get the length of a prefix substring
+ *__our_strspn_prefixsubstr - This function will get
+ *the length of a prefix substring.
  *@str1: This is the string to be searched
  *@str2: This is the string to be used
  *
@@ -67,7 +68,8 @@ int __our_strspn_prefixsubstr(char *str1, char *str2)
 }
 
 /**
- *__our_strcspn_computes_segment_str - This function will compute a segment of str1
+ *__our_strcspn_computes_segment_str - This function will
+ *compute a segment of str1.
  *which will consist of characters not in str2
  *@str1: This is the string to be searched
  *@str2: This is the string to be used

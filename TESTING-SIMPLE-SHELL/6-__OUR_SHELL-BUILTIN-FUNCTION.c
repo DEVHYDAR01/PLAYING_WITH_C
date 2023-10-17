@@ -7,7 +7,8 @@
  *Return: void is returned
  */
 
-void __our_env_currentenvirons(char **tokenized_command __attribute__((unused)))
+void __our_env_currentenvirons(char **tokenized_command
+		__attribute__((unused)))
 {
 	int i;
 
@@ -19,7 +20,7 @@ void __our_env_currentenvirons(char **tokenized_command __attribute__((unused)))
 }
 
 /**
- * quit - This function will exit or quit the shell
+ * __our_quit_exit_shell - This function will exit or quit the shell
  * @tokenized_command: The command to be entered
  *
  * Return: void is returned
@@ -58,5 +59,6 @@ void __our_quit_exit_shell(char **tokenized_command)
 		}
 	}
 	else
-		__our_printedstring("$: exit doesn't take more than one argument\n", STDERR_FILENO);
+		__our_printedstring("$: exit doesn't take
+				more than one argument\n", STDERR_FILENO);
 }

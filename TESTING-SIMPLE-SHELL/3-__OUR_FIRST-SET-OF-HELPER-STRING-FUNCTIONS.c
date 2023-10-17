@@ -4,7 +4,7 @@
  * __our_tokenizeinput - This function will tokenize input
  * and it will store it into an array
  *@input_string: This will be our input to be parsed into it
- *@delim: This is our delimiter to be used which 
+ *@delim: This is our delimiter to be used which
  *needs to be a one character string
  *
  *Return: It will return array of tokens
@@ -21,13 +21,15 @@ char **__our_tokenizeinput(char *input_string, char *delim)
 
 	while (token != NULL)
 	{
-		av = __our_realloc_memoryblock(av, sizeof(*av) * num_delim, sizeof(*av) * (num_delim + 1));
+		av = __our_realloc_memoryblock(av, sizeof(*av)
+				* num_delim, sizeof(*av) * (num_delim + 1));
 		av[num_delim] = token;
 		token = __our_strtok_tokenizestr(NULL, delim, &save_ptr);
 		num_delim++;
 	}
 
-	av = __our_realloc_memoryblock(av, sizeof(*av) * num_delim, sizeof(*av) * (num_delim + 1));
+	av = __our_realloc_memoryblock(av, sizeof(*av)
+			* num_delim, sizeof(*av) * (num_delim + 1));
 	av[num_delim] = NULL;
 
 	return (av);
@@ -73,9 +75,10 @@ void __our_remove_newline(char *str)
 }
 
 /**
- *__our_strcpy_string_buffer - This function will copy a string to another buffer.
- *@source: This will be our source that it will copy from.
- *@dest: Here will be our destination to copy.
+ * __our_strcpy_string_buffer - This function will
+ * copy a string to another buffer.
+ * @source: This will be our source that it will copy from.
+ * @dest: Here will be our destination to copy.
  *
  * Return: void returns nothing
  */

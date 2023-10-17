@@ -73,7 +73,8 @@ int __our_atoi_str_to_int(char *s)
  *
  * Return: The pointer to the address of the new memory block is returned
  */
-void *__our_realloc_memoryblock(void *ptr, unsigned int old_size, unsigned int new_size)
+void *__our_realloc_memoryblock(void *ptr,
+		unsigned int old_size, unsigned int new_size)
 {
 	void *temp_block;
 	unsigned int k;
@@ -119,7 +120,8 @@ void __our_ctrl_c_handler(int signum)
 }
 
 /**
- * __our_remove_comment_ignores - This function will ignore everything after a '#' char
+ * __our_remove_comment_ignores - This function will ignore
+ * everything after a '#' char.
  * @input: This is the input to be used
  *
  * Return: void

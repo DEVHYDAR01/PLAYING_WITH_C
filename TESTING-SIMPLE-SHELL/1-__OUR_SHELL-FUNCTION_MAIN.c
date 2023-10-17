@@ -1,6 +1,5 @@
 #include "shell.h"
 
-
 	char **commands = NULL;
 	char *line = NULL;
 	char *shell_name = NULL;
@@ -22,6 +21,8 @@
 
 int main(int argc __attribute__((unused)), char **argv)
 {
+	
+
 	char **current_command = NULL;
 	int i, type_command = 0;
 	size_t n = 0;
@@ -51,7 +52,6 @@ int main(int argc __attribute__((unused)), char **argv)
 			}
 			type_command = parse_command(current_command[0]);
 
-			/* This will initialize */
 			__our_initializer(current_command, type_command);
 			free(current_command);
 		}

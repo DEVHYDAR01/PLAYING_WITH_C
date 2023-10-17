@@ -1,25 +1,16 @@
 #include "shell.h"
-
 /**
- * Authors: MARWAN MAI 
- * 		 DEVHYDAR01
+ * parse_command - This function will determine the type of the command
+ * @command: our commands to be parsed.
  *
- * Description:
- * This are our extended functions for our main.c
- */
-
-
-/** parse_command - This function will determine the type of the command
- * @command: our commands to be parsed
+ * AUTHORS:MARWAN MAI & DEVHYDAR.
+ * Description - EXTERNAL_COMMAND (1) represents commands like /bin/ls
+ * INTERNAL_COMMAND (2) represents commands like exit, env
+ * PATH_COMMAND (3) represents commands found in the PATH like ls
+ * INVALID_COMMAND (-1) represents invalid commands
  *
- * Return: constant representing the type of the command is returned
- * Description -
- * 		 EXTERNAL_COMMAND (1) represents commands like /bin/ls
- *		 INTERNAL_COMMAND (2) represents commands like exit, env
- *		 PATH_COMMAND (3) represents commands found in the PATH like ls
- *		 INVALID_COMMAND (-1) represents invalid commands
+ * Return: constant returning the type of command is returned.
  */
-
 int parse_command(char *command)
 {
 	int i;
@@ -36,7 +27,6 @@ int parse_command(char *command)
 		if (__our_strcmp_comparestr(command, internal_command[i]) == 0)
 			return (INTERNAL_COMMAND);
 	}
-	/* @check_path - checks if a command is found in the PATH */
 	path = check_path(command);
 	if (path != NULL)
 	{
@@ -50,7 +40,8 @@ int parse_command(char *command)
 /**
  * execute_command - This function will execute
  * a command that is based on it's type
- * @tokenized_command: This is the tokenized form of the command (ls -l == {ls, -l, NULL})
+ * @tokenized_command: This is the tokenized form
+ * of the command (ls -l == {ls, -l, NULL})
  * @command_type: This the type of the command
  *
  * Return: void is returned
@@ -91,7 +82,8 @@ void execute_command(char **tokenized_command, int command_type)
 }
 
 /**
- * check_path - This function will check wheather a command is found in the PATH
+ * check_path - This function will check wheather
+ * a command is found in the PATH.
  * @command: This is the command to be used
  *
  * Return: path where the command is found in, NULL if not found is returned.
