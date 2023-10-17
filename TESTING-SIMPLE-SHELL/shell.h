@@ -15,7 +15,7 @@
 #include <limits.h>
 
 /**
- *struct map - This struct will map a command name to a function 
+ *struct map - This struct will map a command name to a function
  *
  *@command_name: This is the name of the command
  *@func: This will be the function that executes the command.
@@ -60,7 +60,8 @@ char *__our_strchr_locates_charstr(char *s, char c);
 /*This will be our third helper functions*/
 char *__our_strtok_tokenizestr(char *string, char *delim, char **save_ptr);
 int __our_atoi_str_to_int(char *s);
-void *__our_realloc_memoryblock(void *ptr, unsigned int old_size, unsigned int new_size);
+void *__our_realloc_memoryblock(void *ptr,
+		unsigned int old_size, unsigned int new_size);
 void __our_ctrl_c_handler(int signum);
 void __our_remove_comment_ignores(char *input);
 
@@ -72,7 +73,8 @@ void (*get_func(char *))(char **);
 char *_getenv(char *);
 
 /*This are our built_in functions*/
-void __our_env_currentenvirons(char **tokenized_command __attribute__((unused)));
+void __our_env_currentenvirons(char **tokenized_command
+		__attribute__((unused)));
 void __our_quit_exit_shell(char **tokenized_command);
 
 /*main*/

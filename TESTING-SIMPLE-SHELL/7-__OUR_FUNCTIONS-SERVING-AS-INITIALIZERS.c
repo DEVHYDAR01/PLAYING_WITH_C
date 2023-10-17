@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * initializer - starts executing everything
+ * __our_initializer - starts executing everything
  * @current_command: try to check current token
  * @type_command: parse token
  *

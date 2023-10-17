@@ -1,11 +1,9 @@
 #include "shell.h"
-
 /**
- * non_interactive - handles non_interactive mode
+ * __our_non_interactive - This function will handle the non_interactive mode
  *
  * Return: void
  */
-
 void __our_non_interactive(void)
 {
 	char **current_command = NULL;
