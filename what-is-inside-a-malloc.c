@@ -7,11 +7,13 @@
 
 int main(void)
 {
-	int *ptr;
+	int *ptr, i;
 
 	ptr = (int *) malloc(sizeof(int) * 3);
-
-	printf("%ls", ptr);
+	for (i = 0; ptr[i] < 2; i++)
+	{
+		printf("%d\n", ptr);
+	}
 
 	return (0);
 }
